@@ -329,7 +329,7 @@ const resetPoll = () => {
 
 <style scoped>
 .interactive-tool { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
-h1 { text-align: center; color: #2c3e50; margin-bottom: 30px; }
+h1 { text-align: center; color: #2c3e50; margin-bottom: 30px; line-height: 1.4; word-break: break-word; }
 .card { background: #ffffff; border-radius: 12px; padding: 24px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: 1px solid #eaeaea; }
 
 /* 模式切換 */
@@ -389,6 +389,9 @@ h3 { line-height: 1.5; word-break: break-word; }
 
 /* 響應式設計 (RWD) */
 @media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
   .mode-switch {
     flex-direction: column;
   }

@@ -354,6 +354,8 @@ h1 {
   text-align: center;
   color: #2c3e50;
   margin-bottom: 30px;
+  line-height: 1.4;
+  word-break: break-word;
 }
 
 .card {
@@ -599,6 +601,9 @@ h2 {
 
 /* 響應式設計 (RWD) */
 @media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
   .name-display {
     font-size: 2.2rem;
   }

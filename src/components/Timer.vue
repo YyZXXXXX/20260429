@@ -238,7 +238,7 @@ onUnmounted(() => {
 
 <style scoped>
 .interactive-tool { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #333; }
-h1 { text-align: center; color: #2c3e50; margin-bottom: 30px; }
+h1 { text-align: center; color: #2c3e50; margin-bottom: 30px; line-height: 1.4; word-break: break-word; }
 .card { 
   background: rgba(255, 255, 255, 0.85); 
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
@@ -315,6 +315,9 @@ h2 { margin-top: 0; font-size: 1.2rem; color: #34495e; border-bottom: 2px solid 
 
 /* 響應式設計 (RWD) */
 @media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
   .mode-switch {
     flex-direction: column;
   }

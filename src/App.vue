@@ -163,6 +163,7 @@ watch(currentTab, (newTab) => {
   font-size: 1.8rem;
   text-align: center;
   word-break: break-word;
+  line-height: 1.4;
 }
 
 .tabs {

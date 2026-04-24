@@ -272,7 +272,7 @@ onUnmounted(() => { if (p5Instance) p5Instance.remove(); });
   pointer-events: none; z-index: 9999;
 }
 
-h1 { text-align: center; color: #2c3e50; margin-bottom: 30px; }
+h1 { text-align: center; color: #2c3e50; margin-bottom: 30px; line-height: 1.4; word-break: break-word; }
 .card {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
@@ -406,6 +406,9 @@ h2 {
 
 /* 響應式設計 (RWD) */
 @media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
   .group-item {
     flex-direction: column;
     gap: 15px;
