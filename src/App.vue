@@ -135,6 +135,7 @@ watch(currentTab, (newTab) => {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
+  gap: 10px;
 }
 
 .current-time, .theme-toggle {
@@ -146,6 +147,7 @@ watch(currentTab, (newTab) => {
   border-radius: 20px;
   border: 1px solid rgba(0, 0, 0, 0.05);
   transition: all 0.3s;
+  text-align: center;
 }
 
 .theme-toggle {
@@ -159,6 +161,8 @@ watch(currentTab, (newTab) => {
   margin: 0 0 15px 0;
   color: #2c3e50;
   font-size: 1.8rem;
+  text-align: center;
+  word-break: break-word;
 }
 
 .tabs {
@@ -246,6 +250,14 @@ watch(currentTab, (newTab) => {
   .tabs button {
     flex: 1 1 calc(50% - 15px); /* 一排兩個按鈕 */
     font-size: 1rem;
+    padding: 8px 10px;
+  }
+  .top-controls {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .navbar h1 {
+    font-size: 1.5rem;
   }
 }
 </style>

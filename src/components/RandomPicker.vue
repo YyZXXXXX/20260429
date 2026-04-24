@@ -346,7 +346,7 @@ onUnmounted(() => {
 }
 
 /* 模式切換 */
-.mode-switch { display: flex; gap: 15px; padding: 15px; justify-content: center; }
+.mode-switch { display: flex; gap: 15px; padding: 15px; justify-content: center; flex-wrap: wrap; }
 .mode-switch button { padding: 12px 24px; font-size: 1.1rem; font-weight: bold; border: 2px solid #e0e0e0; background: rgba(255,255,255,0.5); color: #7f8c8d; border-radius: 8px; cursor: pointer; transition: all 0.3s; flex: 1;}
 .mode-switch button.active { border-color: #4facfe; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: #fff; box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4); }
 
@@ -379,6 +379,7 @@ h2 {
   display: flex;
   gap: 10px;
   margin-bottom: 15px;
+  flex-wrap: wrap;
 }
 
 .input-group input {
@@ -465,6 +466,8 @@ h2 {
   align-items: center;
   gap: 8px;
   cursor: pointer;
+  word-break: break-word;
+  line-height: 1.4;
 }
 
 /* 抽籤視覺展示區 */
@@ -486,6 +489,10 @@ h2 {
   font-weight: 900;
   color: white;
   letter-spacing: 2px;
+  text-align: center;
+  padding: 0 10px;
+  word-break: break-word;
+  line-height: 1.2;
 }
 
 /* 抽籤時的動畫 (垂直滾動感模擬) */
@@ -551,6 +558,8 @@ h2 {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-wrap: wrap;
+  word-break: break-word;
 }
 
 .results li:last-child {
@@ -570,6 +579,8 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .sync-btn {
@@ -593,6 +604,10 @@ h2 {
   }
   .mode-switch {
     flex-direction: column;
+  }
+  .input-group input, .input-group button {
+    width: 100%;
+    flex: none;
   }
 }
 </style>

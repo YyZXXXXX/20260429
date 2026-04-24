@@ -290,6 +290,8 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .reset-btn {
@@ -307,7 +309,7 @@ h2 {
 .reset-btn:active { transform: translateY(2px); }
 
 /* 輸入框樣式 */
-.input-group { display: flex; gap: 10px; }
+.input-group { display: flex; gap: 10px; flex-wrap: wrap; }
 .input-group input {
   flex: 1; padding: 12px; border: 2px solid #e0e0e0;
   border-radius: 8px; font-size: 16px; transition: border-color 0.3s;
@@ -323,6 +325,7 @@ h2 {
 .list-header {
   display: flex; justify-content: space-between;
   padding: 0 16px 8px; font-weight: bold; color: #7f8c8d; font-size: 0.95rem;
+  flex-wrap: wrap; gap: 5px;
 }
 .header-rank { flex: 1; }
 .header-score { width: 80px; text-align: center; }
@@ -335,6 +338,7 @@ h2 {
   border-radius: 12px; border-left: 6px solid #bdc3c7;
   box-shadow: 0 4px 10px rgba(0,0,0,0.03); width: 100%; box-sizing: border-box;
   transition: all 0.3s ease;
+  gap: 10px;
 }
 .group-item.is-first {
   border-left-color: #f1c40f; background: #fffdf5;
@@ -342,10 +346,10 @@ h2 {
   box-shadow: 0 4px 12px rgba(241,196,15,0.2); z-index: 1;
 }
 
-.group-info { display: flex; align-items: center; gap: 12px; flex: 1; }
+.group-info { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; }
 .rank { font-size: 1.2rem; font-weight: bold; color: #7f8c8d; min-width: 45px; }
 .rank.gold { color: #f39c12; }
-.name { font-size: 1.25rem; font-weight: 600; }
+.name { font-size: 1.25rem; font-weight: 600; word-break: break-word; line-height: 1.3; }
 .remove-btn {
   background: none; border: none; color: #e74c3c; font-size: 1.2rem;
   cursor: pointer; opacity: 0.3; transition: opacity 0.2s; padding: 0 8px;
@@ -357,7 +361,7 @@ h2 {
   width: 80px; text-align: center;
 }
 
-.controls { display: flex; gap: 8px; flex: 1; justify-content: flex-end; }
+.controls { display: flex; gap: 8px; flex: 1; justify-content: flex-end; flex-wrap: wrap; }
 .controls button {
   padding: 10px 14px; font-size: 1rem; font-weight: bold; border: none;
   border-radius: 6px; cursor: pointer; color: white;
@@ -405,10 +409,22 @@ h2 {
   .group-item {
     flex-direction: column;
     gap: 15px;
+    align-items: flex-start;
+  }
+  .group-info {
+    width: 100%;
+  }
+  .score-display {
+    align-self: center;
   }
   .controls {
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
+  }
+  .controls button { flex: 1; }
+  .input-group input, .input-group button {
+    width: 100%;
+    flex: none;
   }
 }
 </style>

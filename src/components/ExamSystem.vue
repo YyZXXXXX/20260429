@@ -349,15 +349,17 @@ h1 { text-align: center; color: #2c3e50; margin-bottom: 30px; }
 .question-card.is-correct { border-left-color: #2ecc71; background-color: #f9fffb; }
 .question-card.is-wrong { border-left-color: #e74c3c; background-color: #fff9f9; }
 .q-number { color: #3498db; font-weight: 900; margin-right: 8px; }
-.badge { font-size: 0.8rem; background: #ecf0f1; color: #7f8c8d; padding: 4px 8px; border-radius: 4px; vertical-align: middle; margin-left: 10px; }
+.badge { font-size: 0.8rem; background: #ecf0f1; color: #7f8c8d; padding: 4px 8px; border-radius: 4px; vertical-align: middle; margin-left: 10px; display: inline-block; white-space: nowrap; }
+h3 { line-height: 1.5; word-break: break-word; }
 
 /* 選項樣式 */
 .options { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
-.option-label { display: flex; align-items: center; padding: 12px 16px; border: 2px solid #ecf0f1; border-radius: 8px; cursor: pointer; transition: all 0.2s; background: #fff; }
+.option-label { display: flex; align-items: flex-start; padding: 12px 16px; border: 2px solid #ecf0f1; border-radius: 8px; cursor: pointer; transition: all 0.2s; background: #fff; word-break: break-word; line-height: 1.4; gap: 8px; }
 .option-label:hover:not(:disabled) { border-color: #bdc3c7; }
 .option-label.is-selected { border-color: #3498db; background: #ebf5fb; }
-.option-label input { margin-right: 12px; transform: scale(1.2); cursor: pointer; }
-.opt-text { flex: 1; font-size: 1.05rem; }
+.option-label input { margin-top: 4px; transform: scale(1.2); cursor: pointer; flex-shrink: 0; }
+.opt-text { flex: 1; font-size: 1.05rem; margin-top: 1px; }
+.icon-check, .icon-cross { flex-shrink: 0; margin-top: 2px; }
 
 /* 作答回饋高亮 */
 .option-label.correct-ans { border-color: #2ecc71; background: #eafaf1; font-weight: bold; }
@@ -367,7 +369,7 @@ h1 { text-align: center; color: #2c3e50; margin-bottom: 30px; }
 /* 投票區塊 */
 .input-label { display: block; margin-bottom: 8px; font-weight: bold; color: #34495e; }
 .poll-input { width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 16px; margin-bottom: 15px; box-sizing: border-box; }
-.poll-title { font-size: 1.4rem; color: #2c3e50; text-align: center; margin-bottom: 20px; }
+.poll-title { font-size: 1.4rem; color: #2c3e50; text-align: center; margin-bottom: 20px; word-break: break-word; line-height: 1.4; }
 .poll-options { display: flex; flex-direction: column; gap: 12px; }
 .vote-btn { width: 100%; padding: 14px; background: #ecf0f1; color: #2c3e50; border: none; border-radius: 8px; font-size: 1.1rem; cursor: pointer; text-align: left; transition: background 0.2s; font-weight: 500; }
 .vote-btn:hover:not(:disabled) { background: #bdc3c7; }

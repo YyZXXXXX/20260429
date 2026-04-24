@@ -249,13 +249,13 @@ h1 { text-align: center; color: #2c3e50; margin-bottom: 30px; }
 h2 { margin-top: 0; font-size: 1.2rem; color: #34495e; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
 
 /* 模式切換 */
-.mode-switch { display: flex; gap: 15px; padding: 15px; justify-content: center; }
+.mode-switch { display: flex; gap: 15px; padding: 15px; justify-content: center; flex-wrap: wrap; }
 .mode-switch button { padding: 12px 24px; font-size: 1.1rem; font-weight: bold; border: 2px solid #e0e0e0; background: rgba(255,255,255,0.5); color: #7f8c8d; border-radius: 8px; cursor: pointer; transition: all 0.3s; flex: 1;}
 .mode-switch button.active { border-color: #4facfe; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: #fff; box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4); }
 
-.flex-between { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
+.flex-between { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
 .flex-between h2 { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
-.phase-badge { background: #eafaf1; color: #27ae60; padding: 4px 10px; border-radius: 12px; font-size: 0.9rem; font-weight: bold; border: 1px solid #2ecc71;}
+.phase-badge { background: #eafaf1; color: #27ae60; padding: 4px 10px; border-radius: 12px; font-size: 0.9rem; font-weight: bold; border: 1px solid #2ecc71; display: inline-block;}
 .desc-text { color: #7f8c8d; line-height: 1.5; font-size: 1.05rem; }
 
 .quick-set { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
@@ -265,7 +265,7 @@ h2 { margin-top: 0; font-size: 1.2rem; color: #34495e; border-bottom: 2px solid 
 .quick-set button.active-btn { background-color: #e74c3c; color: white; }
 
 /* 自訂時間區塊樣式 */
-.custom-set { display: flex; align-items: center; gap: 8px; margin-top: 15px; padding-top: 15px; border-top: 1px dashed rgba(0,0,0,0.15); }
+.custom-set { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 15px; padding-top: 15px; border-top: 1px dashed rgba(0,0,0,0.15); }
 .custom-label { font-weight: bold; color: #34495e; font-size: 0.95rem; }
 .time-input { width: 60px; padding: 8px; border: 2px solid #e0e0e0; border-radius: 8px; text-align: center; font-size: 1rem; background: rgba(255,255,255,0.8); transition: border-color 0.2s; }
 .time-input:focus { outline: none; border-color: #3498db; background: #fff; }
