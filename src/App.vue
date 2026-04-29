@@ -615,7 +615,7 @@ watch(currentTab, (newTab) => {
 .app-container.dark .tabs button::before { border-color: transparent transparent rgba(220, 220, 230, 0.95) transparent; }
 
 /* 對卡片、背景與所有文字自動適配暗色 */
-.app-container.dark :deep(.card) { background: rgba(30, 30, 40, 0.85); border-color: rgba(255, 255, 255, 0.1); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); }
+.app-container.dark :deep(.card) { background: rgba(30, 30, 40, 0.85); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); border: none; }
 .app-container.dark :deep(h1), .app-container.dark :deep(h2), .app-container.dark :deep(h3) { color: #e0e0e0; border-bottom-color: rgba(255, 255, 255, 0.1); }
 .app-container.dark :deep(.group-item) { background: rgba(40, 40, 50, 0.95); border-left-color: #555; box-shadow: none; }
 .app-container.dark :deep(.group-item.is-first) { background: rgba(60, 50, 20, 0.95); border-left-color: #f1c40f; }

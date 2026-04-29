@@ -367,7 +367,7 @@ h1 {
   -webkit-backdrop-filter: blur(12px);
   border-radius: 12px; padding: 24px; margin-bottom: 24px; 
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.07); 
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: none;
 }
 
 h2 {

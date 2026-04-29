@@ -333,7 +333,7 @@ const resetPoll = () => {
 <style scoped>
 .interactive-tool { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
 h1 { text-align: center; color: #2c3e50; margin-bottom: 30px; line-height: 1.4; word-break: break-word; }
-.card { background: #ffffff; border-radius: 12px; padding: 24px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: 1px solid #eaeaea; }
+.card { background: #ffffff; border-radius: 12px; padding: 24px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: none; }
 
 /* 模式切換 */
 .mode-switch { display: flex; gap: 15px; padding: 15px; justify-content: center; }

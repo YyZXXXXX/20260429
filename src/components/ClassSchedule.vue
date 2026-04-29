@@ -125,7 +125,7 @@ const resetToDefault = () => {
 <style scoped>
 .interactive-tool { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 1000px; margin: 0 auto; padding: 20px; color: #333; }
 h1 { text-align: center; color: #2c3e50; margin-bottom: 30px; line-height: 1.4; word-break: break-word; }
-.card { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 12px; padding: 24px; margin-bottom: 24px; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.07); border: 1px solid rgba(255, 255, 255, 0.5); }
+.card { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 12px; padding: 24px; margin-bottom: 24px; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.07); border: none; }
 h2 { margin-top: 0; font-size: 1.2rem; color: #34495e; margin-bottom: 0; }
 
 .flex-between { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; border-bottom: 2px solid #eee; padding-bottom: 15px; }
