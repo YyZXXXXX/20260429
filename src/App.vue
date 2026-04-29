@@ -522,6 +522,7 @@ watch(currentTab, (newTab) => {
   color: #34495e;
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1), inset 0 2px 5px rgba(255, 255, 255, 1), inset 0 -2px 5px rgba(0, 0, 0, 0.05);
+  z-index: 10; /* 提升層級，避免在手機版折行時提示框被下排按鈕擋住 */
 }
 
 .tabs button.active {
@@ -547,7 +548,8 @@ watch(currentTab, (newTab) => {
   padding: 8px 12px;
   border-radius: 8px;
   font-size: 0.95rem;
-  white-space: nowrap;
+  white-space: pre-wrap; /* 讓文字在手機等小螢幕上可以自然換行避免超出畫面 */
+  max-width: 220px;
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
