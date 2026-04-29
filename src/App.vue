@@ -588,6 +588,17 @@ watch(currentTab, (newTab) => {
 
 .content {
   padding: 0 20px 40px;
+  /* 強制移除外圍內容區域可能繼承的全域邊框與陰影 */
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* 強制清除各個子工具外圍的邊框設定 */
+.app-container :deep(.interactive-tool) {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 /* =========================================================
