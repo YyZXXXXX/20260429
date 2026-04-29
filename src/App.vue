@@ -670,5 +670,11 @@ watch(currentTab, (newTab) => {
   .navbar h1 {
     font-size: 1.5rem;
   }
+  /* 手機版電子課表夜間模式適配 */
+  .app-container.dark :deep(.schedule-table tbody tr) {
+    background: rgba(30, 30, 40, 0.8);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  .app-container.dark :deep(.cell-data::before) { color: #aaa; }
 }
 </style>

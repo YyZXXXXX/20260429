@@ -169,4 +169,70 @@ h2 { margin-top: 0; font-size: 1.2rem; color: #34495e; margin-bottom: 0; }
 .remove-btn:hover { opacity: 1; }
 
 .empty-text { text-align: center; padding: 30px; color: #7f8c8d; font-style: italic; }
+
+/* =========================================
+   響應式設計 (RWD)：手機版表格轉為「卡片式排列」
+   ========================================= */
+@media (max-width: 768px) {
+  .table-scroll {
+    border: none;
+    overflow-x: hidden; /* 取消橫向捲軸 */
+  }
+  .schedule-table {
+    min-width: 100%;
+    background: transparent;
+  }
+  .schedule-table thead {
+    display: none; /* 在手機上隱藏上方表頭 */
+  }
+  .schedule-table tbody tr {
+    display: block;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  .schedule-table td {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+  }
+  .schedule-table td:last-child { border-bottom: none; }
+  
+  .time-col {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 15px 10px;
+  }
+  
+  .cell-data {
+    position: relative;
+    padding: 12px 12px 12px 90px;
+    min-height: 50px;
+  }
+  /* 利用虛擬元素在手機版自動補上星期標題 */
+  .cell-data::before {
+    position: absolute; left: 15px; top: 50%; transform: translateY(-50%);
+    font-weight: bold; color: #7f8c8d; font-size: 1rem;
+  }
+  .schedule-table td:nth-child(2)::before { content: '星期一'; }
+  .schedule-table td:nth-child(3)::before { content: '星期二'; }
+  .schedule-table td:nth-child(4)::before { content: '星期三'; }
+  .schedule-table td:nth-child(5)::before { content: '星期四'; }
+  .schedule-table td:nth-child(6)::before { content: '星期五'; }
+
+  .cell-content { flex-direction: row; align-items: center; gap: 10px; }
+  .schedule-table input { text-align: left; }
+  .period-input, .time-input { text-align: center; }
+  .subject-input { margin-bottom: 0; flex: 2; font-size: 1.05rem; }
+  .teacher-input { flex: 1; }
+  
+  .action-col { width: 100%; background: rgba(231, 76, 60, 0.05); }
+  .remove-btn { padding: 12px 0; font-weight: bold; }
+  .remove-btn::after { content: ' 刪除此節次'; font-size: 1rem; }
+}
 </style>
