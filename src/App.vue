@@ -238,15 +238,15 @@ onMounted(() => {
   const savedTab = localStorage.getItem('toolbox-current-tab');
   if (savedTab) currentTab.value = savedTab;
 
-  // 隨機生成星空資料 (100顆星星)
+  // 隨機生成星空資料 (120顆星星，對應稍微放大的背景空間)
   const generatedStars = [];
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 120; i++) {
     const size = Math.random() * 3 + 1; // 1px ~ 4px
     generatedStars.push({
       width: `${size}px`,
       height: `${size}px`,
-      left: `${Math.random() * 100}vw`,
-      top: `${Math.random() * 100}vh`,
+      left: `${Math.random() * 130}vw`,
+      top: `${Math.random() * 130}vh`,
       animationDuration: `${Math.random() * 2 + 1}s`,
       animationDelay: `${Math.random() * 2}s`
     });
@@ -295,14 +295,18 @@ watch(currentTab, (newTab) => {
    ========================================= */
 #animated-bg {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  /* 加大背景範圍並稍微往上偏移，防止手機版滑動回彈或網址列伸縮時出現黑色缺塊 */
+  top: -15vh;
+  left: -15vw;
+  width: 130vw;
+  height: 130vh;
   z-index: -1;
   overflow: hidden;
   background: linear-gradient(to bottom, #74ebd5, #ACB6E5); /* 白天天空 */
   transition: background 1.5s ease-in-out;
+  /* 開啟硬體加速，防止部分手機瀏覽器滾動時閃爍 */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 .app-container.dark #animated-bg {
@@ -354,7 +358,7 @@ watch(currentTab, (newTab) => {
 
 @keyframes floatClouds {
   0% { transform: translateX(-150px) scale(var(--scale)); }
-  100% { transform: translateX(110vw) scale(var(--scale)); }
+  100% { transform: translateX(140vw) scale(var(--scale)); }
 }
 
 /* 星星閃爍動畫 */
